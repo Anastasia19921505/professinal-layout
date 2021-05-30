@@ -117,6 +117,10 @@ details {
     background-color: white;
     width: 360px;
 }
+details[open] > summary{
+    color: #EF5B70;
+}
+
 details > summary:first-of-type {
     list-style-type: none;
 }
