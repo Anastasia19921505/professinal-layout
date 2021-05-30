@@ -346,6 +346,10 @@ footer {
     border: none;
     border-radius: 10px 0 0 10px;
 }
+.footer_input:focus {
+    outline: none;
+    border: 1px solid#F16D7F;
+}
 .footer_center_botton {
     width: 100px;
     height: 49px;
