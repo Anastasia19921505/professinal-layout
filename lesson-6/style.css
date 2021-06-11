@@ -123,7 +123,8 @@ header {
   border-color: #F16D7F;
   padding: 0 0 0 16px;
   font-size: 30px;
-  font-weight: 900 color #222222;
+  font-weight: 900;
+  color: #222222;
 }
 
 .preview_heading h1 .bold_text {
@@ -158,6 +159,7 @@ header {
 .navCheckbox {
   position: relative;
   margin: 0px 14px;
+  z-index: 1;
 }
 
 .navCheckbox__input {
@@ -204,6 +206,7 @@ header {
 .filter {
   position: absolute;
   font-size: 14px;
+  z-index: 1;
 }
 
 .filter svg {
@@ -530,6 +533,7 @@ details > summary:first-of-type {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 57px 0 48px;
+  z-index: 0;
 }
 
 .main_card {
@@ -553,16 +557,7 @@ details > summary:first-of-type {
   position: relative;
 }
 
-.main_card_img:hover button {
-  opacity: 1;
-}
-
-.main_card_img:hover .imgFon {
-  -webkit-filter: brightness(40%);
-          filter: brightness(40%);
-}
-
-.main_card_img button {
+.main_card_img .btnAdd {
   position: absolute;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -574,6 +569,15 @@ details > summary:first-of-type {
   color: #FFFFFF;
   border: 1px solid #FFFFFF;
   opacity: 0;
+}
+
+.main_card_img:hover .btnAdd {
+  opacity: 1;
+}
+
+.main_card_img:hover .imgFon {
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
 }
 
 .main_card_box {

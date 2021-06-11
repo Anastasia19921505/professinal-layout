@@ -107,8 +107,8 @@ header {
             border-color:$color_red;
             padding: 0 0 0 16px;
             font-size: 30px;
-            font-weight: 900
-            color #222222;
+            font-weight: 900;
+            color: #222222;
             &  .bold_text {
             font-size: 48px;
         }
@@ -133,6 +133,7 @@ header {
 .navCheckbox {
     position: relative;
     margin: 0px 14px;
+    z-index: 1;
     &__input {
         display: none;
         &-title {
@@ -171,6 +172,7 @@ header {
 .filter {
     position: absolute;
     font-size: 14px;
+    z-index: 1;
     & svg {
         margin-left: 5px;
         fill: black;
@@ -376,6 +378,7 @@ details {
         @include spacebetween();
         flex-wrap: wrap;
         margin: 57px 0 48px;
+        z-index: 0;
     }
     &_card {
         width: 360px;
@@ -386,15 +389,7 @@ details {
         &_img {
             display: flex;
             position: relative;
-            &:hover {
-                & button {
-                    opacity: 1;
-                }
-                & .imgFon {
-                    filter: brightness(40%);
-                }
-            }
-            & button {
+            & .btnAdd {
                 position: absolute;
                 align-self: center;
                 width: 138px;
@@ -405,6 +400,13 @@ details {
                 border: 1px solid #FFFFFF;
                 opacity: 0;
             }
+            &:hover .btnAdd {
+                opacity: 1;
+            }
+            &:hover .imgFon {
+                filter: brightness(40%);
+            }
+        
         }
         &_box {
             margin: 20px 16px;
@@ -573,11 +575,12 @@ footer {
         margin: 24px 0 24px 7px;
         width: 32px;
         height: 32px;
-        font-size: 22px;
+        font-size: 26px;
         text-align: center;
         vertical-align: middle;
         padding: 5px;
         box-sizing: border-box;
+        align-self: center;
         &:active {
             background: $color_red;
         }
